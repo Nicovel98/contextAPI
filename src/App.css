@@ -76,6 +76,7 @@ body {
 .logo {
   display: flex;
   align-items: center;
+  justify-items: start;
 }
 
 .logo-img {
