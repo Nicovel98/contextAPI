@@ -36,17 +36,16 @@ export const AppRouter = () => {
         </nav>
       </header>
       {/* Configurar rutas */}
-      <section className="content">
-        <Routes>
-          <Route path='/' element={<Home />}></Route>
-          <Route path='/inicio' element={<Home />}></Route>
-          <Route path='/articulos' element={<Articles />}></Route>
-          <Route path='/acerca-de' element={<About />}></Route>
-          <Route path='/contacto' element={<Contact />}></Route>
-          <Route path='/login' element={<Login />}></Route>
-          <Route path='*' element={<ErrorPage />}></Route>
-        </Routes>
-      </section>
+
+      <Routes>
+        <Route path='/' element={<div className="content"><Home /></div>}></Route>
+        <Route path='/inicio' element={<div className="content"><Home /></div>}></Route>
+        <Route path='/articulos' element={<div className="content"><Articles /></div>}></Route>
+        <Route path='/acerca-de' element={<div className="content"><About /></div>}></Route>
+        <Route path='/contacto' element={<div className="content"><Contact /></div>}></Route>
+        <Route path='/login' element={<div className="content"><Login /></div>}></Route>
+        <Route path='*' element={<ErrorPage />}></Route>
+      </Routes>
 
     </Router>
   )
