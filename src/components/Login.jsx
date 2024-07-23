@@ -7,8 +7,9 @@ export const Login = () => {
   const { user, setUser } = useContext(Context);
 
   const saveData = e => {
+    // Evitar que el formulario se envíe por defecto
     e.preventDefault();
-    alert(e.target.username.value);
+
     // Crear el objeto del usuario a partir de los datos del formulario
     let identified_user = {
       username: e.target.username.value,

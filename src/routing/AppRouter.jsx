@@ -37,7 +37,7 @@ export const AppRouter = () => {
             {user.username !== null ? (  // Sí username es diferente a nulo ? (Verdadero) : (Falso)
               <>
                 <li>
-                  <NavLink to='/' >{user.username}</NavLink>
+                  <NavLink to='/' id="text-username">{user.username}</NavLink>
                 </li>
                 <li>
                   <a href="/" onClick={e => {

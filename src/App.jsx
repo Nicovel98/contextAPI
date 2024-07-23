@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 import { Context } from './context/Context'
 import { AppRouter } from './routing/AppRouter'
@@ -14,7 +14,15 @@ function App() {
      city: 'San Francisco', //Ciudad del usuario
    } */
 
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState(() => {
+    const storedUser = localStorage.getItem('user');
+    return storedUser ? JSON.parse(storedUser) : {}; // Sí encuentra un usuario en el localstorage lo trae en formato JSON
+  });
+
+  useEffect(() => {
+    // Almacena el usuario en el localstorage cuando se cambia
+    localStorage.setItem('user', JSON.stringify(user));
+  }, [user]);
 
   return (
     <Context.Provider value={{ user, setUser }}>
