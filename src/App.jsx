@@ -14,11 +14,7 @@ function App() {
      city: 'San Francisco', //Ciudad del usuario
    } */
 
-  const [user, setUser] = useState({
-    username: '@John',
-    name: 'John', // Nombre del usuario
-    phone: '123-456-555', // Telefono del usuario
-  });
+  const [user, setUser] = useState({});
 
   return (
     <Context.Provider value={{ user, setUser }}>
