@@ -6,8 +6,13 @@ import { About } from "../components/About";
 import { Contact } from "../components/Contact";
 import { Login } from "../components/Login";
 import logo from '../assets/logo.png';
+import { useContext } from "react";
+import { Context } from "../context/Context";
 
 export const AppRouter = () => {
+
+  const { user, setUser } = useContext(Context);
+
   return (
     <Router>
       {/* Menú de Navegación */}
@@ -29,9 +34,23 @@ export const AppRouter = () => {
             <li>
               <NavLink to='/contacto' >Contacto</NavLink>
             </li>
-            <li>
-              <NavLink to='/login' >Identifícate</NavLink>
-            </li>
+            {user.username !== null ? (  // Sí username es diferente a nulo ? (Verdadero) : (Falso)
+              <>
+                <li>
+                  <NavLink to='/' >{user.username}</NavLink>
+                </li>
+                <li>
+                  <a href="/" onClick={e => {
+                    e.preventDefault();
+                    setUser({ username: null })
+                  }} >Cerrar Sesión</a>
+                </li>
+              </>
+            ) : (
+              <li>
+                <NavLink to='/login' >Identifícate</NavLink>
+              </li>
+            )}
           </ul>
         </nav>
       </header>
