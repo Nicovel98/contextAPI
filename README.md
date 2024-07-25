@@ -10,7 +10,15 @@ Este proyecto es un ejercicio para practicar ContextAPI, desarrollado con React 
 - Consumo de API Pública en Artículos
 - Configurar  Dark Mode
 
-![Video] (src/assets/ContextApi_Video.mp4)
+<div>
+    <p style = 'text-align:center;'>
+        <iframe width="600" height = "420"
+        src="/src/assets/ContextApi_Video.mp4">
+        </iframe>
+    </p>
+    </div>
+
+<!-- ![Video] (./src/assets/ContextApi_Video.mp4) -->
 
 ## Instalación
 
