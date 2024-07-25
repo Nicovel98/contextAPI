@@ -1,0 +1,174 @@
+/* Estilos Generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(227, 219, 219);
+  color: black;
+  font-family: Arial, sans-serif;
+}
+
+#text-username {
+  color: seagreen;
+}
+
+/* Modo Oscuro cuerpo */
+.dark-mode :root {
+  background-color: #1a1a1a;
+}
+
+.dark-mode button {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-mode-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.dark-mode-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.dark-mode-icon-sun {
+  color: #FFD700;
+  /* Color dorado para el ícono del sol */
+}
+
+.dark-mode-icon-moon {
+  color: goldenrod;
+  /* Color blanco para el ícono de la luna */
+}
+
+/* Header Navigation */
+.header-nav nav {
+  background-color: midnightblue;
+  height: 80px;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding-right: 25px;
+  padding-left: 25px;
+}
+
+.header-nav nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  flex-basis: 100%;
+}
+
+.header-nav a {
+  color: white;
+  text-decoration: none;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.header-nav a:hover {
+  color: rgb(20, 134, 195);
+}
+
+/* Modo oscuro para el body */
+.dark-mode {
+  background-color: #535353;
+}
+
+/* Modo Oscuro para Header Navigation */
+.dark-mode .header-nav nav {
+  background-color: #1a1a1a;
+  /* Color de fondo del nav en modo oscuro */
+}
+
+.dark-mode .header-nav a {
+  color: #fff;
+  /* Color del texto en enlaces en modo oscuro */
+}
+
+.dark-mode .header-nav a:hover {
+  color: rgb(20, 134, 195);
+  /* Color del texto en enlaces al pasar el ratón en modo oscuro */
+}
+
+/* Content Area */
+.content {
+  width: 70%;
+  min-height: 350px;
+  background-color: #edf2f4;
+  border-radius: 15px;
+  border: 1px solid gray;
+  margin: 15px auto;
+  padding: 25px;
+}
+
+/* Cambia el color de la descripción de los productos */
+.dark-mode .card-body {
+  background-color: #014f86;
+  color: #edede9;
+}
+
+.dark-mode .content {
+  background-color: #0d1b2a;
+  /* Fondo del contenido en modo oscuro */
+  border: 1px solid #444;
+  /* Borde del contenido en modo oscuro */
+  color: #e3dbdb;
+  /* Color del texto en el contenido en modo oscuro */
+}
+
+/* Login Styles */
+.login {
+  display: block;
+  margin: 15px;
+  padding: 15px;
+}
+
+.login input[type="text"],
+.login input[type="submit"] {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  width: 50%;
+  box-sizing: border-box;
+}
+
+.login input[type="submit"] {
+  background-color: seagreen;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login input[type="submit"]:hover {
+  background-color: black;
+}
+
+/* Modo Oscuro para Login Styles */
+.dark-mode .login input[type="submit"] {
+  background-color: darkblue;
+  /* Fondo del botón en modo oscuro */
+  color: #fff;
+  /* Color del texto del botón en modo oscuro */
+}
+
+.dark-mode .login input[type="submit"]:hover {
+  background-color: grey;
+}
+
+/* Logo Styles */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 80px;
+  margin-right: 10px;
+}

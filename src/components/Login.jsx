@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { Context } from "../context/Context";
 
+
 export const Login = () => {
 
   // Extraemos user y setUser del contexto usando useContext
@@ -45,6 +46,10 @@ export const Login = () => {
 
     // Actualizamos el estado del usuario
     setUser(identified_user);
+    e.target.reset(); // Limpiamos los campos del formulario al presionar el botón Enviar
+    e.target.username.focus(); // Se posiciona el cursor en el campo username al presionar el botón Enviar
+    // Luego redireccionamos a la página principal
+    window.location.href = '/';
   };
 
 

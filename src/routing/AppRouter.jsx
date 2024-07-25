@@ -8,6 +8,9 @@ import { Login } from "../components/Login";
 import logo from '../assets/logo.png';
 import { useContext } from "react";
 import { Context } from "../context/Context";
+import { DetailArticle } from "../components/DetailArticle";
+import { Checkout } from "../components/Checkout";
+import { DarkMode } from '../components/DarkMode';
 
 export const AppRouter = () => {
 
@@ -51,21 +54,24 @@ export const AppRouter = () => {
                 <NavLink to='/login' >Identifícate</NavLink>
               </li>
             )}
+            <li>
+              <DarkMode />
+            </li>
           </ul>
         </nav>
       </header>
       {/* Configurar rutas */}
-
       <Routes>
         <Route path='/' element={<div className="content"><Home /></div>}></Route>
         <Route path='/inicio' element={<div className="content"><Home /></div>}></Route>
         <Route path='/articulos' element={<div className="content"><Articles /></div>}></Route>
+        <Route path='/article/:id' element={<DetailArticle />}></Route>
+        <Route path='/checkout/:id' element={<Checkout />} />
         <Route path='/acerca-de' element={<div className="content"><About /></div>}></Route>
         <Route path='/contacto' element={<div className="content"><Contact /></div>}></Route>
         <Route path='/login' element={<div className="content"><Login /></div>}></Route>
         <Route path='*' element={<ErrorPage />}></Route>
       </Routes>
-
     </Router>
   )
 }
