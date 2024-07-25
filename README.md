@@ -14,8 +14,6 @@ Este proyecto es un ejercicio para practicar ContextAPI, desarrollado con React 
 
 ![DarkMode](src/assets/DarkMode_articulos.png)
 
-![video](src/assets/ContextApi_Video.mp4)
-
 ## Instalación
 
 Para ejecutar este proyecto en tu máquina local, sigue estos pasos:
