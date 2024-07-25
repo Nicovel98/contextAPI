@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
 import { Context } from "../context/Context";
+import { useNavigate } from "react-router-dom";
 
 
 export const Login = () => {
@@ -9,6 +10,7 @@ export const Login = () => {
   const [username, setUsername] = useState('');
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
+  const navigate = useNavigate();
 
   // Método para validar el campo username: no admite espacios en blanco ni mayúsculas
   const handleUsernameV = e => {
@@ -49,7 +51,7 @@ export const Login = () => {
     e.target.reset(); // Limpiamos los campos del formulario al presionar el botón Enviar
     e.target.username.focus(); // Se posiciona el cursor en el campo username al presionar el botón Enviar
     // Luego redireccionamos a la página principal
-    window.location.href = '/';
+    navigate("/");
   };
 
 
