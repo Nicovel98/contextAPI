@@ -13,10 +13,10 @@ Este proyecto es un ejercicio para practicar ContextAPI, desarrollado con React 
 <div>
     <p style = 'text-align:center;'>
         <iframe width="600" height = "420"
-        src="/src/assets/ContextApi_Video.mp4">
+        src="./src/assets/ContextApi_Video.mp4">
         </iframe>
     </p>
-    </div>
+</div>
 
 <!-- ![Video] (./src/assets/ContextApi_Video.mp4) -->
 
